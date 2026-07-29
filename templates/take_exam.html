@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h2>{{ exam.title }}</h2>
+
+<form method="POST">
+    {% csrf_token %}
+
+    {% for q in questions %}
+
+    <div class="card mb-3">
+        <div class="card-body">
+
+            <h5>{{ forloop.counter }}. {{ q.question }}</h5>
+
+            <input type="radio" name="q{{ q.id }}" value="{{ q.option1 }}">
+            {{ q.option1 }} <br>
+
+            <input type="radio" name="q{{ q.id }}" value="{{ q.option2 }}">
+            {{ q.option2 }} <br>
+
+            <input type="radio" name="q{{ q.id }}" value="{{ q.option3 }}">
+            {{ q.option3 }} <br>
+
+            <input type="radio" name="q{{ q.id }}" value="{{ q.option4 }}">
+            {{ q.option4 }}
+
+        </div>
+    </div>
+
+    {% endfor %}
+
+    <button type="submit" class="btn btn-success">
+        Submit Exam
+    </button>
+
+</form>
+
+{% endblock %}

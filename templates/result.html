@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container mt-5 text-center">
+
+    <h1>Exam Completed</h1>
+
+    <h2>Your Score</h2>
+
+    <h1>{{ score }} / {{ total }}</h1>
+
+    <a href="/exams/" class="btn btn-primary">
+        Back to Exams
+    </a>
+
+</div>
+
+{% endblock %}
