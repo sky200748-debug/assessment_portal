@@ -120,3 +120,6 @@ GitHub: https://github.com/sky200748-debug
 ⭐ If you find this project useful, consider giving it a star!
 
 Contributions, suggestions and feedback are welcome.
+## UI Preview
+
+![Assessment Portal UI](screenshots/assessment-portal-ui-mockup.png)
